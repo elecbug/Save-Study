@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS03-Asynchronous", "TPS03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS04-PingsPongs", "TPS04-PingsPongs\TPS04-PingsPongs.csproj", "{25A90290-0849-43A5-A1AA-A2889C082C26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS05-NetTalk", "TPS05-NetTalk\TPS05-NetTalk.csproj", "{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{25A90290-0849-43A5-A1AA-A2889C082C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25A90290-0849-43A5-A1AA-A2889C082C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25A90290-0849-43A5-A1AA-A2889C082C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
