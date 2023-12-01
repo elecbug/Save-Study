@@ -5,16 +5,18 @@ using System.Text;
 public class Program
 {
     private static IPEndPoint IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12356);
-    
+
     public static void Main(string[] args)
     {
         string? msg = Console.ReadLine();
 
         switch (msg!.ToLower())
         {
-            case "server": Server();
+            case "server":
+                Server();
                 break;
-            case "client": Client();
+            case "client":
+                Client();
                 break;
         }
     }

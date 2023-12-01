@@ -29,7 +29,7 @@ public class Server
         while (true)
         {
             socket.Receive(buffer);
-            
+
             string msg = Program.ToString(buffer);
 
             Console.WriteLine(msg);

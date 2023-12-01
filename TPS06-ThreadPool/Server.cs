@@ -73,7 +73,7 @@ public class Server
 
                         s.Send(buffer);
                     }
-                } 
+                }
 
                 buffer = new byte[1024];
             }

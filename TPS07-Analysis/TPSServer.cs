@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 
 public class TPSServer
@@ -30,14 +29,14 @@ public class TPSServer
         }
     }
 
-    public void Stop() 
+    public void Stop()
     {
         lock (this)
         {
             IsConnected = false;
         }
 
-        Listener.Stop(); 
+        Listener.Stop();
     }
 
     private void RoofCare()
@@ -104,7 +103,7 @@ public class TPSServer
                             //Debug.WriteLine(ex.ToString());
                         }
                     }
-                } 
+                }
 
                 buffer = new byte[1024];
             }

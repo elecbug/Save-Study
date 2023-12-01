@@ -5,7 +5,7 @@ public class Client
 {
     public IPEndPoint IP { get; private set; }
     public TcpClient TcpClient { get; private set; }
-    public string Name {get; private set;}
+    public string Name { get; private set; }
 
     public Client(IPEndPoint ip, string name)
     {

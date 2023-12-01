@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OCC02_Customs.Customs
+﻿namespace OCC02_Customs.Customs
 {
     public class HintTextBox : RichTextBox
     {
         private Label HintLabel { get; set; }
         public string HintText { get => HintLabel.Text; set => HintLabel.Text = value; }
 
-        public HintTextBox() 
+        public HintTextBox()
         {
-            HintLabel = new Label() 
+            HintLabel = new Label()
             {
                 Parent = this,
                 Visible = true,
                 Enabled = false,
-                Location = new Point(0,0),
+                Location = new Point(0, 0),
                 Dock = DockStyle.Fill,
             };
 

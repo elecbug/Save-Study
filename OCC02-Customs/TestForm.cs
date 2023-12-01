@@ -26,6 +26,14 @@ namespace OCC02_Customs
                 Size = new Size(500, 100),
                 Multiline = true,
             };
+
+            new UploadBox()
+            {
+                Parent = this,
+                Visible = true,
+                Location = new Point(510, 100),
+                Size = new Size(200, 200),
+            };
         }
     }
 }
