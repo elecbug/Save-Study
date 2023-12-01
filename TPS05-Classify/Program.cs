@@ -36,5 +36,5 @@ public class Program
 /// How to fix? 
 /// And, can not check message sender. 
 /// Do you have coding idea to allocated sender ID?
-/// Finally, Server is died if only one client disconnected.
+/// Finally, server is died if only one client disconnected.
 /// You can do try-catching?
