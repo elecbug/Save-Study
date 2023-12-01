@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS01-PingPong", "TPS01-PingPong\TPS01-PingPong.csproj", "{53BA2ECD-6796-4226-AFD6-9904E355401C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS01-PingPong", "TPS01-PingPong\TPS01-PingPong.csproj", "{53BA2ECD-6796-4226-AFD6-9904E355401C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS02-Threading", "TPS02-Threading\TPS02-Threading.csproj", "{17DE12C7-9648-427F-A72B-377B41687366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS02-Threading", "TPS02-Threading\TPS02-Threading.csproj", "{17DE12C7-9648-427F-A72B-377B41687366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS03-Asynchronous", "TPS03-Asynchronous\TPS03-Asynchronous.csproj", "{EE242250-99AA-4092-8C25-AF09335C2E77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS03-Asynchronous", "TPS03-Asynchronous\TPS03-Asynchronous.csproj", "{EE242250-99AA-4092-8C25-AF09335C2E77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS04-PingsPongs", "TPS04-PingsPongs\TPS04-PingsPongs.csproj", "{25A90290-0849-43A5-A1AA-A2889C082C26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS04-PingsPongs", "TPS04-PingsPongs\TPS04-PingsPongs.csproj", "{25A90290-0849-43A5-A1AA-A2889C082C26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS05-NetTalk", "TPS05-NetTalk\TPS05-NetTalk.csproj", "{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS05-Classify", "TPS05-Classify\TPS05-Classify.csproj", "{E5AF057C-EE42-440F-9B3E-A904F144B573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{25A90290-0849-43A5-A1AA-A2889C082C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25A90290-0849-43A5-A1AA-A2889C082C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25A90290-0849-43A5-A1AA-A2889C082C26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8827C41-3580-4F04-8ABD-A8AA0BA7D0D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AF057C-EE42-440F-9B3E-A904F144B573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AF057C-EE42-440F-9B3E-A904F144B573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AF057C-EE42-440F-9B3E-A904F144B573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AF057C-EE42-440F-9B3E-A904F144B573}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
