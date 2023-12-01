@@ -60,6 +60,9 @@ namespace OCC02_Customs.Customs
         private ErasableComboBox FileComboBox { get; set; }
         private Label PlusLabel { get; set; }
 
+        public new DragEventHandler DragEnter { get => throw new Exception("This control is not edit the DragEnter event."); }
+        public new DragEventHandler DragDrop { get => throw new Exception("This control is not edit the DragDrop event."); }
+
         public ComboBox.ObjectCollection Items { get => FileComboBox.ComboBox.Items; }
         public List<byte[]> Data { get => FileComboBox.Data; }
 
@@ -89,8 +92,8 @@ namespace OCC02_Customs.Customs
                 Text = "+",
             };
 
-            DragEnter += UploadBoxDragEnter;
-            DragDrop += UploadBoxDragDrop;
+            base.DragEnter += UploadBoxDragEnter;
+            base.DragDrop += UploadBoxDragDrop;
             PlusLabel.SizeChanged += UploadBoxSizeChanged;
         }
 

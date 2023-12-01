@@ -5,6 +5,9 @@
         private Label HintLabel { get; set; }
         public string HintText { get => HintLabel.Text; set => HintLabel.Text = value; }
 
+        public new EventHandler GotFocus { get => throw new Exception("This control is not edit the GotFocus event."); }
+        public new EventHandler LostFocus { get => throw new Exception("This control is not edit the LostFocus event."); }
+
         public HintTextBox()
         {
             HintLabel = new Label()
@@ -17,8 +20,8 @@
             };
 
             HintLabel.Click += HintLabelClick;
-            GotFocus += HintTextBoxGotFocus;
-            LostFocus += HintTextBoxLostFocus;
+            base.GotFocus += HintTextBoxGotFocus;
+            base.LostFocus += HintTextBoxLostFocus;
         }
 
         private void HintTextBoxLostFocus(object? sender, EventArgs e)
