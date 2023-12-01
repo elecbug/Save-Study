@@ -5,11 +5,13 @@ public class Client
 {
     public IPEndPoint IP { get; private set; }
     public TcpClient TcpClient { get; private set; }
+    public string Name {get; private set;}
 
-    public Client(IPEndPoint ip)
+    public Client(IPEndPoint ip, string name)
     {
         IP = ip;
         TcpClient = new TcpClient();
+        Name = name;
     }
 
     public void Start()
@@ -45,7 +47,7 @@ public class Client
 
         while (true)
         {
-            string msg = Console.ReadLine()!;
+            string msg = "[" + Name + "] " + Console.ReadLine()!;
 
             buffer = Program.ToBytes(msg);
 

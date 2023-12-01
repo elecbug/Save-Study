@@ -24,12 +24,24 @@ public class Server
 
     private void RoofBroadcast(Socket socket)
     {
+        byte[] buffer = new byte[1024];
+
         while (true)
         {
-            lock (socket)
+            socket.Receive(buffer);
+            
+            string msg = Program.ToString(buffer);
+            Console.WriteLine(msg);
+
+            lock (Sockets)
             {
-                socket.
+                foreach (Socket s in Sockets)
+                {
+                    s.Send(buffer);
+                }
             }
+
+            buffer = new byte[1024];
         }
     }
 
@@ -46,6 +58,8 @@ public class Server
 
             Thread thread = new Thread(delegate () { RoofBroadcast(socket); });
             // Thread thread = new Thread(() => { RoofBroadcast(socket); });
+
+            thread.Start();
         }
     }
 }
