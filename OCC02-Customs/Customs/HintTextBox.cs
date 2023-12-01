@@ -17,7 +17,32 @@ namespace OCC02_Customs.Customs
             {
                 Parent = this,
                 Visible = true,
+                Enabled = false,
+                Location = new Point(0,0),
+                Dock = DockStyle.Fill,
             };
+
+            HintLabel.Click += HintLabelClick;
+            GotFocus += HintTextBoxGotFocus;
+            LostFocus += HintTextBoxLostFocus;
+        }
+
+        private void HintTextBoxLostFocus(object? sender, EventArgs e)
+        {
+            if (Text == "")
+            {
+                HintLabel.Visible = true;
+            }
+        }
+
+        private void HintTextBoxGotFocus(object? sender, EventArgs e)
+        {
+            HintLabel.Visible = false;
+        }
+
+        private void HintLabelClick(object? sender, EventArgs e)
+        {
+            Parent!.Focus();
         }
     }
 }
