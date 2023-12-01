@@ -38,5 +38,5 @@ public class Program
 /// 1. Over clients are disconneted
 /// 2. Thread pools size upgrade
 /// In now, the mission is upgrade thread pools size over then over then over then... by 2^N but, that's size is maiximum 64.
-/// And, How to stop server and client?
+/// And, how to stop server and client?
 /// Finally, catch all exceptions that you can think about.
