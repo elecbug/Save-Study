@@ -81,4 +81,4 @@ public class Program
 
 /// Mission
 /// This connection is only can read if the other side write message.
-/// How to apply threading ang locking?
+/// How to apply threading and locking?
