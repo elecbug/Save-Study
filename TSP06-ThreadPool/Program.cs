@@ -12,7 +12,7 @@ public class Program
         switch (msg!.ToLower())
         {
             case "server":
-                new Server(IP, 10).Start();
+                new Server(IP, 3).Start();
                 break;
             case "client":
                 Console.Write("Name: ");
@@ -31,3 +31,10 @@ public class Program
         return Encoding.UTF8.GetString(bytes);
     }
 }
+
+/// Mission
+/// What is happend if number of client over then the thread pools count?
+/// You have two choices.
+/// 1. Over clients are disconneted
+/// 2. Thread pools size upgrade
+/// /// In now, the mission is upgrade thread pools size over then over then over then... by 2^N but, that's size is maiximum 100.

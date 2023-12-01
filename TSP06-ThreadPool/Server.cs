@@ -42,17 +42,21 @@ public class Server
 
             while (true)
             {
-                if (socket.Connected == false)
+                try
+                {
+                    socket.Receive(buffer);
+                }
+                catch (Exception ex)
                 {
                     lock (Sockets)
                     {
                         Sockets.Remove(socket);
 
+                        Console.WriteLine(ex.ToString());
+
                         break;
                     }
                 }
-
-                socket.Receive(buffer);
 
                 string msg = Program.ToString(buffer);
 
