@@ -31,6 +31,7 @@ public class Server
             socket.Receive(buffer);
             
             string msg = Program.ToString(buffer);
+
             Console.WriteLine(msg);
 
             lock (Sockets)
