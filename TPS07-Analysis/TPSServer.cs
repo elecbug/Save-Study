@@ -24,7 +24,8 @@ public class TPSServer
 
         for (int i = 0; i < Pools; i++)
         {
-            Thread thread = new Thread(RoofCare);
+            int tNum = i;
+            Thread thread = new Thread(()=> { RoofCare(tNum); });
             thread.Start();
         }
     }
@@ -39,7 +40,7 @@ public class TPSServer
         Listener.Stop();
     }
 
-    private void RoofCare()
+    private void RoofCare(int tNum)
     {
         byte[] buffer = new byte[1024];
 
@@ -47,15 +48,11 @@ public class TPSServer
         {
             Socket socket;
 
-            try
+            lock (Listener)
             {
                 socket = Listener.AcceptSocket();
-            }
-            catch (Exception ex)
-            {
-                //Debug.WriteLine(ex.ToString());
 
-                break;
+                Console.WriteLine("Thread #" + tNum + " is connected");
             }
 
             lock (Sockets)
@@ -65,13 +62,13 @@ public class TPSServer
 
             while (true)
             {
-                try
-                {
+                try 
+                { 
                     socket.Receive(buffer);
 
-                    //string msg = Program.ToString(buffer);
+                    string msg = Program.ToString(buffer);
 
-                    //Console.WriteLine(msg);
+                    Console.WriteLine(msg);
                 }
                 catch (Exception ex)
                 {
@@ -80,6 +77,8 @@ public class TPSServer
                         Sockets.Remove(socket);
 
                         //Debug.WriteLine(ex.ToString());
+
+                        Console.WriteLine("Thread #" + tNum + " is disconnected");
 
                         break;
                     }

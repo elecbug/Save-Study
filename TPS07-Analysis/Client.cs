@@ -55,9 +55,9 @@ public class Client
                 break;
             }
 
-            //string msg = Program.ToString(buffer);
+            string msg = Program.ToString(buffer);
 
-            //Console.WriteLine(msg);
+            Console.WriteLine(msg);
 
             buffer = new byte[1024];
         }

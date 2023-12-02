@@ -7,55 +7,25 @@ public class Program
 
     public static void Main(string[] args)
     {
-        for (int i = 1; i <= 50; i += 5)
+        string? msg = Console.ReadLine();
+
+        switch (msg!.ToLower())
         {
-            TpsTest(i);
-            NormalTest(i);
+            case "server":
+                TPSServer server = new TPSServer(IP, 3);
+                server.Start();
 
-            Console.WriteLine();
+                break;
+            case "client":
+                int rand = new Random().Next();
+
+                Console.WriteLine("ID: " + rand);
+
+                Client client = new Client(IP, rand.ToString());
+                client.Start();
+
+                break;
         }
-
-        Task.Delay(-1);
-    }
-
-    public static void TpsTest(int pool)
-    {
-        DateTime start = DateTime.Now;
-
-        TPSServer server = new TPSServer(IP, pool);
-        server.Start();
-
-        for (int i = 0; i < pool * 5; i++)
-        {
-            Client client = new Client(IP, i.ToString().PadLeft(3, '0'));
-            client.Start();
-
-            client.Stop();
-        }
-
-        server.Stop();
-
-        Console.WriteLine("Thread pools server(" + pool + ") Time: " + (DateTime.Now - start).Microseconds + "ms");
-    }
-
-    public static void NormalTest(int pool)
-    {
-        DateTime start = DateTime.Now;
-
-        NormalServer server = new NormalServer(IP);
-        server.Start();
-
-        for (int i = 0; i < pool * 5; i++)
-        {
-            Client client = new Client(IP, i.ToString().PadLeft(3, '0'));
-            client.Start();
-
-            client.Stop();
-        }
-
-        server.Stop();
-
-        Console.WriteLine("Normal server(" + pool + ") Time: " + (DateTime.Now - start).Microseconds + "ms");
     }
 
     public static byte[] ToBytes(string msg)
