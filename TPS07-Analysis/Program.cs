@@ -11,12 +11,12 @@ public class Program
 
         switch (msg!.ToLower())
         {
-            case "server":
-                TPSServer server = new TPSServer(IP, 3);
+            case "s":
+                TPSServer server = new TPSServer(IP, 2);
                 server.Start();
 
                 break;
-            case "client":
+            case "c":
                 int rand = new Random().Next();
 
                 Console.WriteLine("ID: " + rand);

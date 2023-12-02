@@ -8,6 +8,8 @@ public class TPSServer
     public List<Socket> Sockets { get; private set; }
     public int Pools { get; private set; }
     public bool IsConnected { get; private set; }
+    public object IsRun { get; private set; }
+    public int IsRunNow { get; private set; }
 
     public TPSServer(IPEndPoint ip, int pools)
     {
@@ -16,6 +18,8 @@ public class TPSServer
         Sockets = new List<Socket>();
         Pools = pools;
         IsConnected = true;
+        IsRun = new object();
+        IsRunNow = 0;
     }
 
     public void Start()
@@ -25,8 +29,11 @@ public class TPSServer
         for (int i = 0; i < Pools; i++)
         {
             int tNum = i;
+
             Thread thread = new Thread(()=> { RoofCare(tNum); });
             thread.Start();
+
+            Console.WriteLine("Run thread #" + tNum);
         }
     }
 
@@ -53,6 +60,26 @@ public class TPSServer
                 socket = Listener.AcceptSocket();
 
                 Console.WriteLine("Thread #" + tNum + " is connected");
+
+                lock (IsRun)
+                {
+                    IsRunNow++;
+
+                    if (IsRunNow == Pools)
+                    {
+                        for (int i = Pools; i < Pools * 2; i++)
+                        {
+                            int t = i;
+
+                            Thread thread = new Thread(() => { RoofCare(t); });
+                            thread.Start();
+
+                            Console.WriteLine("Run thread #" + t);
+                        }
+
+                        Pools *= 2;
+                    }
+                }
             }
 
             lock (Sockets)
@@ -79,6 +106,11 @@ public class TPSServer
                         //Debug.WriteLine(ex.ToString());
 
                         Console.WriteLine("Thread #" + tNum + " is disconnected");
+
+                        lock (IsRun)
+                        {
+                            IsRunNow--;
+                        }
 
                         break;
                     }
