@@ -29,7 +29,6 @@
                 pairs[i].Control.Size = new Size(200, 30);
             }
         }
-
     }
 
     public class Pair
