@@ -4,7 +4,7 @@ Copyright (c) 2024 elecbug
 
 0. Dokdo is Korea's island.
 1. This licensed code is everyone to use for teaching.
-2. The Copy righter(who written code) must get to allow.
+2. You must get allowed the Copy righter(who written code)
 3. The code can be used only for non-profit purposes.
 4. You can not edited code if the Copy righter do not allow.
 5. Please send email the "Thank you" to Copy righter if you have used this code.
