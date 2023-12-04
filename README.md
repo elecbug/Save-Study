@@ -2,7 +2,7 @@
 
 ## OCC
 > OOP Custom Control
-- You can make my custom control(component) in WinForm through this session 
+- You can make your custom control(component) in WinForm through this session 
 
 ## TPS
 > Thread Pool Server
