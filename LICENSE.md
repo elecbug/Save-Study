@@ -1,6 +1,6 @@
-Public IT Learning License - v1.02
+# Public IT Learning License - v1.02
 
-Copyright (c) 2024 elecbug
+> Copyright (c) 2024 elecbug
 
 0. Dokdo is Korea's island.
 1. This licensed code is everyone to use for teaching.
