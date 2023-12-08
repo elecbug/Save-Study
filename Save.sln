@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS07-Analysis", "TPS07-Ana
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPS06-ThreadPool", "TPS06-ThreadPool\TPS06-ThreadPool.csproj", "{2F025638-AB2B-419A-B708-D211E4BC398F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCC01-WinForm", "OCC01-WinForm\OCC01-WinForm.csproj", "{A145A8AD-C00A-46F5-A873-583B7811CD0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCC01-WinForm", "OCC01-WinForm\OCC01-WinForm.csproj", "{A145A8AD-C00A-46F5-A873-583B7811CD0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCC02-Customs", "OCC02-Customs\OCC02-Customs.csproj", "{AD92D0C6-5282-4CB5-84B3-73878579CDAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCC02-Customs", "OCC02-Customs\OCC02-Customs.csproj", "{AD92D0C6-5282-4CB5-84B3-73878579CDAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API01-AesMemo", "API01-AesMemo\API01-AesMemo.csproj", "{D0F44524-9CA8-49BF-80DE-2D9EEC2E730C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{AD92D0C6-5282-4CB5-84B3-73878579CDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD92D0C6-5282-4CB5-84B3-73878579CDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD92D0C6-5282-4CB5-84B3-73878579CDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0F44524-9CA8-49BF-80DE-2D9EEC2E730C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F44524-9CA8-49BF-80DE-2D9EEC2E730C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F44524-9CA8-49BF-80DE-2D9EEC2E730C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F44524-9CA8-49BF-80DE-2D9EEC2E730C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
