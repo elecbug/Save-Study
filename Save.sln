@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCC02-Customs", "OCC02-Cust
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API01-OpenSSL", "API01-OpenSSL\API01-OpenSSL.csproj", "{23392D95-6BB4-4319-A893-EBCFE8192AD1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API02-OpenHWMonitor", "API02-OpenHWMonitor\API02-OpenHWMonitor.csproj", "{0908A87F-B2E5-4861-9023-A0C8DA1BD8FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{23392D95-6BB4-4319-A893-EBCFE8192AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23392D95-6BB4-4319-A893-EBCFE8192AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23392D95-6BB4-4319-A893-EBCFE8192AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0908A87F-B2E5-4861-9023-A0C8DA1BD8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0908A87F-B2E5-4861-9023-A0C8DA1BD8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0908A87F-B2E5-4861-9023-A0C8DA1BD8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0908A87F-B2E5-4861-9023-A0C8DA1BD8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
