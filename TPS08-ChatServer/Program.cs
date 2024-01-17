@@ -41,7 +41,7 @@ public class Program
             const string REQCONNECT = "req-connect:";
             const string REQSEND = "req-send:";
 
-            string msg = Encoding.UTF8.GetString(buffer);
+            string msg = Encoding.UTF8.GetString(buffer).Replace("\0", "");
             //connect:name:value
 
             Console.WriteLine(msg);

@@ -27,29 +27,37 @@ namespace TPS09_ChatClient
 
             Thread read = new Thread(() =>
             {
-            while (true)
-            {
-                lock (OutputTextBox)
+                while (true)
                 {
                     byte[] buffer = new byte[1024];
 
                     client.GetStream().Read(buffer);
 
-                    string msg = Encoding.UTF8.GetString(buffer);
+                    string msg = Encoding.UTF8.GetString(buffer).Replace("\0", "");
 
-                    //MessageBox.Show(msg);
-
-                    if (msg.StartsWith(REQCONNECT))
+                    lock (OutputTextBox)
                     {
-                        this.Invoke(() => { OutputTextBox.Text += "[" + msg.Split(':')[1] + "] ´ÔÀÌ Âü¿©ÇÏ¼Ì½À´Ï´Ù.\r\n"; });
+                        if (msg.StartsWith(REQCONNECT))
+                        {
+                            OutputTextBox.Invoke(() =>
+                            { 
+                                OutputTextBox.Text += "[" + msg.Split(':')[1] + "] ´ÔÀÌ Âü¿©ÇÏ¼Ì½À´Ï´Ù.\n"; 
+                            });
+                        }
+                        else if (msg.StartsWith(REQSEND))
+                        {
+                            OutputTextBox.Invoke(() => 
+                            {
+                                OutputTextBox.Text += "[" + msg.Split(':')[1] + "]: " + msg.Split(':')[2] + "\n";
+                            });
+                            InputTextBox.Invoke(() =>
+                            {
+                                InputTextBox.Text = "";
+                            });
+                        }
                     }
-                    else if (msg.StartsWith(REQSEND))
-                    {
-                        this.Invoke(() => { OutputTextBox.Text += "[" + msg.Split(':')[1] + "]: " + msg.Split(':')[2] + "\r\n"; });
-                    }
-
                     buffer = new byte[1024];
-                    }
+
                 }
             });
             read.Start();
